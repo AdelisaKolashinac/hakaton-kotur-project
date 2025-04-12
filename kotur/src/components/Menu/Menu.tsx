@@ -4,6 +4,7 @@ import "./MenuFilterCard/MenuFilterCard.css";
 import Header from "../Header/Header";
 import MenuHeroSection from "./MenuHeroSection/MenuHeroSection";
 import MenuFilterSection from "./MenuFilterSection/MenuFilterSection";
+import Footer from "../Footer/Footer";
 
 const Menu = () => {
   return (
@@ -11,6 +12,7 @@ const Menu = () => {
       <Header />
       <MenuHeroSection />
       <MenuFilterSection />
+      <Footer />
     </div>
   );
 };
