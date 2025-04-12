@@ -1,0 +1,18 @@
+.services-section {
+  margin-top: 30px;
+  padding: 50px 0;
+  background-color: #000000;
+}
+
+.services-section .services-card-container {
+  display: flex;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.services-section .services-section-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #c0c6ba;
+  text-align: center;
+}
