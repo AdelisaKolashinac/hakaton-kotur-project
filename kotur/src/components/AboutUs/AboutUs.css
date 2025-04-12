@@ -1,0 +1,93 @@
+/*Hero section*/
+
+.hero-section {
+  background-image: url("/ImgsAboutUs/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.circular-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero-section {
+  background-image: url("/ImgsAboutUs/image00005%201.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+}
+
+.circular-text-svg {
+  width: 300px;
+  height: 300px;
+} */
+
+/*Our history*/
+.our-history {
+  background-color: rgb(119, 118, 118);
+  color: black;
+  position: relative;
+}
+
+.our-history::before,
+.our-history::after,
+.our-history .third-square {
+  content: "";
+  position: absolute;
+  border: 2px solid black;
+}
+
+.our-history::before {
+  top: 10px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg);
+}
+
+.our-history::after {
+  top: 880px;
+  left: 100px;
+  width: 250px;
+  height: 250px;
+  transform: rotate(75deg);
+}
+
+.our-history .third-square {
+  top: 800px;
+  left: 1500px;
+  width: 400px;
+  height: 400px;
+  transform: rotate(30deg);
+}
+
+/*Cocatail catering*/
+
+.coctail-catering {
+  background-color: rgba(35, 35, 35, 0.844);
+  color: white;
+}
+
+/*Reserve Hall*/
+
+.reserve-hall {
+  background-color: rgb(119, 118, 118);
+  color: black;
+}
