@@ -7,11 +7,12 @@ import "./components/Testimonials/Testimonials.css";
 import "./components/Footer/Footer.css";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Gallery from "./components/Gallery/Gallery";
-
+import Events from "./components/Events/Events";
 function App() {
   return (
     <>
-      <LandingPage />
+      {/* <LandingPage /> */}
+      <Events />
     </>
   );
 }
