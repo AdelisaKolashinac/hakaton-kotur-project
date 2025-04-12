@@ -6,6 +6,7 @@ import "./components/EventCard/EventCard.css";
 import "./components/Testimonials/Testimonials.css";
 import "./components/Footer/Footer.css";
 import LandingPage from "./components/LandingPage/LandingPage";
+import Gallery from "./components/Gallery/Gallery";
 
 function App() {
   return (
