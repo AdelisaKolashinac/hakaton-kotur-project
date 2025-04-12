@@ -5,12 +5,15 @@ import "./components/EventsCardsList/EventsCardsList.css";
 import "./components/EventCard/EventCard.css";
 import "./components/Testimonials/Testimonials.css";
 import "./components/Footer/Footer.css";
-import LandingPage from "./components/LandingPage/LandingPage";
+import "./components/Menu/Menu.css";
+import Menu from "./components/Menu/Menu";
+// import LandingPage from "./components/LandingPage/LandingPage";
 
 function App() {
   return (
     <>
-      <LandingPage />
+      {/* <LandingPage /> */}
+      <Menu />
     </>
   );
 }
