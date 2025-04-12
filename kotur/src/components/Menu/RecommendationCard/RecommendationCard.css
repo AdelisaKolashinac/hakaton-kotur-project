@@ -1,0 +1,28 @@
+.menu .recommendation-card {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
+  padding: 50px 30px;
+}
+
+.menu .recommendation-card {
+  width: 100%;
+}
+
+.menu .recommendation-card:hover {
+  background-color: #111;
+  transform: scale(1.02);
+}
+
+.menu .recommendation-card-subtitle {
+  color: #cabb63b6;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.menu .recommendation-card-description {
+  font-size: 14px;
+  text-align: start;
+}
