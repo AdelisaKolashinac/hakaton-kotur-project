@@ -63,15 +63,15 @@
 }
 
 .our-history::after {
-  top: 880px;
+  top: 800px;
   left: 100px;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   transform: rotate(75deg);
 }
 
 .our-history .third-square {
-  top: 800px;
+  top: 850px;
   left: 1500px;
   width: 400px;
   height: 400px;
@@ -88,6 +88,137 @@
 /*Reserve Hall*/
 
 .reserve-hall {
+  background-color: rgba(35, 35, 35, 0.844);
+  color: black;
+  position: relative;
+}
+.reserve-hall::before,
+.reserve-hall::after {
+  content: "";
+  position: absolute;
+  border: 2px solid black;
+}
+
+.reserve-hall::before {
+  top: 880px;
+  left: 100px;
+  width: 150px;
+  height: 150px;
+  transform: rotate(75deg);
+  content: "";
+  position: absolute;
+  border: 2px solid black;
+}
+
+.reserve-hall::after {
+  top: -80px;
+  left: 1500px;
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg);
+}
+
+/*From Reserve*/
+
+.form-reserve-section {
+  background-color: #000;
+  color: #fff;
+}
+
+.reserve-form .form-control {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.reserve-form .form-control::placeholder {
+  color: #aaa;
+}
+
+.reserve-form .form-control:focus {
+  background-color: #222;
+  color: #fff;
+  border-color: #888;
+  box-shadow: none;
+}
+
+.reserve-form .form-label {
+  color: #fff;
+}
+
+.reserve-form button {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.reserve-form button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.form-container {
+  background-color: rgb(119, 118, 118);
+}
+
+/*Team section*/
+
+.team-section {
   background-color: rgb(119, 118, 118);
   color: black;
+}
+
+.btn-apply {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: none;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-apply:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/*Apply Jobs*/
+
+.apply-job-section {
+  background-color: #000;
+  color: #fff;
+}
+
+.apply-form .form-control {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.apply-form .form-label {
+  color: #fff;
+}
+
+.apply-form .form-control::placeholder {
+  color: #aaa;
+}
+
+.apply-form .form-control:focus {
+  background-color: #222;
+  color: #fff;
+  border-color: #888;
+  box-shadow: none;
+}
+
+.apply-form button {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.apply-form button:hover {
+  background-color: #ddd;
 }
