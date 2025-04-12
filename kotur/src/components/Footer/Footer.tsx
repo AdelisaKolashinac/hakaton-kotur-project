@@ -15,13 +15,13 @@ const Footer = () => {
         </p>
         <img src="./landingPage/spoon.svg" alt="Spoon Icon" />
         <div className="footer-social-media-icons">
-          <a href="">
+          <a href="https://www.facebook.com/KoturKafeiFilm/?locale2=gl_ES&_rdr" target="_blank">
             <i className="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="">
+          <a href="" target="_blank">
             <i className="fa-brands fa-twitter"></i>
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/koturkafeifilm/?hl=en" target="_blank">
             <i className="fa-brands fa-instagram"></i>
           </a>
         </div>

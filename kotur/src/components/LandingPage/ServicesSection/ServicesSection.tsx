@@ -48,11 +48,14 @@ const ServicesSection = () => {
   return (
     <div className="services-section">
       <h2 className="services-section-title">Услуги</h2>
+      <div className="rectangle-one"></div>
+      <div className="rectangle-two"></div>
       <div className="services-card-container">
         {servicesCards.map((card) => (
           <ServicesCard key={card.id} card={card} />
         ))}
       </div>
+      <div className="rectangle-three"></div>
     </div>
   );
 };

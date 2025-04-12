@@ -2,12 +2,14 @@
   margin-top: 30px;
   padding: 50px 0;
   background-color: #000000;
+  position: relative;
 }
 
 .services-section .services-card-container {
   display: flex;
   gap: 20px;
   padding: 50px 0;
+  z-index: 10;
 }
 
 .services-section .services-section-title {
@@ -15,4 +17,34 @@
   font-weight: 700;
   color: #c0c6ba;
   text-align: center;
+}
+
+.services-section .rectangle-one {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  transform: rotate(45deg);
+}
+
+.services-section .rectangle-two {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  position: absolute;
+  top: -100px;
+  right: 60px;
+  transform: rotate(45deg);
+}
+
+.services-section .rectangle-three {
+  height: 55px;
+  width: 55px;
+  border: 1px solid white;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  transform: rotate(45deg);
 }
