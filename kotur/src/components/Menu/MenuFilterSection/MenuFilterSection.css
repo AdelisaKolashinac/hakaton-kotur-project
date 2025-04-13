@@ -2,6 +2,12 @@
   padding: 50px 0;
 }
 
+.menu-filter-section .menu-items-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
 .menu-filter-section .filter-buttons-container {
   display: flex;
   justify-content: center;
@@ -33,32 +39,47 @@
   padding: 50px 0;
 }
 
-.menu .menu-items-card-container {
+.menu .menu-filter-section .menu-items-card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 40px;
 }
 
-.menu .recommendations-cards {
+.menu .menu-filter-section .recommendations-cards {
   display: flex;
   flex-direction: column;
   gap: 80px;
 }
 
+.menu .menu-filter-section .filter-show-more-btn {
+  border: none;
+  font-weight: 700;
+  margin: 40px auto;
+  padding: 10px 30px;
+  display: block;
+}
+
 @media (max-width: 768px) {
+  .menu-filter-section .menu-items-content {
+    grid-template-columns: 1fr;
+  }
   .menu-filter-section .filter-buttons-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .menu-filter-section h2  {
+  .menu-filter-section h2 {
     display: none;
   }
 
-  .menu .menu-items-card-container {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 40px 0;
+  .menu .menu-filter-section .menu-items-card-container {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+  }
+
+  .menu .menu-filter-section .recommendations-cards {
+    gap: 30px;
   }
 }

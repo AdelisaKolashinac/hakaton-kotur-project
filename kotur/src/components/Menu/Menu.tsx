@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 
 const Menu = () => {
   return (
-    <div className="menu">
+    <div className="menu" id="koktel-meni">
       <Header />
       <MenuHeroSection />
       <MenuFilterSection />

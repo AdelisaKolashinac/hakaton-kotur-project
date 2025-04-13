@@ -2,7 +2,7 @@ import React from "react";
 
 const ReserveHall: React.FC = () => {
   return (
-    <div className="reserve-hall">
+    <div className="reserve-hall" id="iznajmi-prostor">
       <div className="container text-center py-5">
         <h2 className="py-3">Изнајмување на сала</h2>
         <p className="py-3 w-75 mx-auto">
