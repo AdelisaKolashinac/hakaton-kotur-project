@@ -2,7 +2,7 @@ import React from "react";
 
 const CoctailCatering: React.FC = () => {
   return (
-    <div className="container-fluid coctail-catering">
+    <div className="container-fluid coctail-catering" id="koktel-ketering">
       <div className="row align-items-center">
         <div className="col-md-6">
           <img

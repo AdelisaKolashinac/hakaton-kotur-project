@@ -32,8 +32,8 @@
   gap: 20px;
 }
 .menu .menu-hero-section-img .img-container {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
+  height: 400px;
   margin: 0 auto;
 }
 

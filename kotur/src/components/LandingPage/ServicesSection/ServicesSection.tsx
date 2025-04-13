@@ -6,6 +6,8 @@ export interface ServicesCardType {
   icon: string;
   title: string;
   description: string;
+  pageLink?: string;
+  hashLink?: string;
 }
 
 const servicesCards: ServicesCardType[] = [
@@ -16,6 +18,7 @@ const servicesCards: ServicesCardType[] = [
     title: "Коктел мени",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero numquam neque esse ea rem nobis qui eum magni magnam maiores.",
+    pageLink: "/menu",
   },
 
   {
@@ -25,6 +28,7 @@ const servicesCards: ServicesCardType[] = [
     title: "Изнајми простор",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero numquam neque esse ea rem nobis qui eum magni magnam maiores.",
+    hashLink: "iznajmi-prostor",
   },
   {
     id: 3,
@@ -33,6 +37,7 @@ const servicesCards: ServicesCardType[] = [
     title: "Коктел кетеринг",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero numquam neque esse ea rem nobis qui eum magni magnam maiores.",
+    hashLink: "koktel-ketering",
   },
   {
     id: 4,
@@ -41,6 +46,7 @@ const servicesCards: ServicesCardType[] = [
     title: "Котур",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero numquam neque esse ea rem nobis qui eum magni magnam maiores.",
+    hashLink: "kotur",
   },
 ];
 

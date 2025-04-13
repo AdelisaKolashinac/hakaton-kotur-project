@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MenuFilterCard from "../MenuFilterCard/MenuFilterCard";
 import RecommendationCard from "../RecommendationCard/RecommendationCard";
+import { useMediaQuery } from "react-responsive";
 
 export interface MenuFilterCardType {
   id: number;
@@ -141,6 +142,7 @@ const cardsToFilter: MenuFilterCardType[] = [
 
 const MenuFilterSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("Коктели");
+  const [showAll, setShowAll] = useState(false);
 
   const categories = Array.from(
     new Set(cardsToFilter.map((card) => card.category))
@@ -149,6 +151,11 @@ const MenuFilterSection = () => {
   const filteredCards = cardsToFilter.filter(
     (card) => card.category === selectedCategory
   );
+
+  // Show only 3 cards if not expanded and screen is small
+  const isMobileOrTablet = useMediaQuery({ maxWidth: 1024 });
+  const cardsToDisplay =
+    !isMobileOrTablet || showAll ? filteredCards : filteredCards.slice(0, 3);
 
   return (
     <section className="menu-filter-section container">
@@ -167,10 +174,18 @@ const MenuFilterSection = () => {
       <div className="menu-items-section row">
         <div className="menu-items-card col-sm-12 col-lg-7">
           <div className="menu-items-card-container">
-            {filteredCards.map((card) => (
+            {cardsToDisplay.map((card) => (
               <MenuFilterCard key={card.id} card={card} />
             ))}
           </div>
+          {isMobileOrTablet && filteredCards.length > 3 && (
+            <button
+              className="filter-show-more-btn"
+              onClick={() => setShowAll((prev) => !prev)}
+            >
+              {showAll ? "Прикажи помалку" : "Прикажи повеќе"}
+            </button>
+          )}
         </div>
         <div className="recommendations-cards col-sm-12 col-lg-5">
           <RecommendationCard />
