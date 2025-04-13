@@ -19,20 +19,12 @@ const Calendar: React.FC = () => {
     "Дек",
   ];
 
-  // Get current date info
   const currentDate = new Date();
   const currentMonth = currentDate.getMonth();
 
-  // State for selected month and week
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedWeek, setSelectedWeek] = useState(0);
 
-  // Hard-coded reference date from the image
-  const formattedDay = "Недела";
-  const formattedDate = "13.04";
-  const formattedYear = "2025";
-
-  // Get only the current month and the next 5 months (6 total)
   const getVisibleMonths = () => {
     let visibleMonths = [];
     for (let i = 0; i < 6; i++) {
@@ -44,13 +36,11 @@ const Calendar: React.FC = () => {
 
   const visibleMonths = getVisibleMonths();
 
-  // Handle month selection
   const handleMonthSelect = (index: number) => {
     setSelectedMonth(index);
-    setSelectedWeek(0); // Reset to first week when changing month
+    setSelectedWeek(0);
   };
 
-  // Handle week selection
   const handleWeekSelect = (weekIndex: number) => {
     setSelectedWeek(weekIndex);
   };
