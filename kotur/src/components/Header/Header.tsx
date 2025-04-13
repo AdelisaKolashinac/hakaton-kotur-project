@@ -106,28 +106,18 @@ const Header: React.FC = () => {
               </Link>
             </div>
             <div
-              className={`mobile-nav-item mobile-dropdown-header ${
+              className={`mobile-nav-item ${
                 isActive("/events") ? "active" : ""
               }`}
-              onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
             >
-              <span>Настани</span>
-              <span
-                className={`mobile-dropdown-arrow ${
-                  isMobileDropdownOpen ? "open" : ""
-                }`}
-              >
-                ▼
-              </span>
+              <Link to="/events" onClick={() => setIsMobileMenuOpen(false)}>
+                Настани
+              </Link>
             </div>
-            <div
-              className={`mobile-dropdown-container ${
-                isMobileDropdownOpen ? "open" : ""
-              }`}
-            >
+            <div className="mobile-subcategories">
               <Link
                 to="/events/zirni"
-                className={`mobile-dropdown-item ${
+                className={`mobile-subcategory-item ${
                   isActive("/events/zirni") ? "active" : ""
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -136,7 +126,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 to="/events/other"
-                className={`mobile-dropdown-item ${
+                className={`mobile-subcategory-item ${
                   isActive("/events/other") ? "active" : ""
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
