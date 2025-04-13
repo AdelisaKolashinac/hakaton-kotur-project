@@ -42,10 +42,10 @@
 
 @media (max-width: 768px) {
   .landing-page .hero-section {
-    height: calc(70vh + 110px);
+    height: calc(50vh + 110px);
   }
 
   .landing-page .hero-section .logo-container .logo {
-    max-width: 200px;
+    max-width: 150px;
   }
 }
