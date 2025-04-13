@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ServicesCardType } from "../ServicesSection";
 
 interface ServicesCardProps {
@@ -6,7 +7,7 @@ interface ServicesCardProps {
 
 const ServicesCard = ({ card }: ServicesCardProps) => {
   return (
-    <div className="services-card">
+    <Link to="/aboutUs" className="services-card">
       <div className="services-card-img">
         <img src={card.img} alt={card.title} />
         <div className="services-card-icon">
@@ -18,7 +19,7 @@ const ServicesCard = ({ card }: ServicesCardProps) => {
         <p className="services-card-description">{card.description}</p>
         <button className="services-card-button">Дознај повеќе</button>
       </div>
-    </div>
+    </Link>
   );
 };
 export default ServicesCard;

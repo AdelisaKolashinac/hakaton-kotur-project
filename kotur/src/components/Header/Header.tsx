@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,14 +12,20 @@ const Header: React.FC = () => {
       </div>
 
       <nav className="header-nav">
-        <div className="header-nav-item">Котур</div>
-        <div className="header-nav-item">За нас</div>
+        <div className="header-nav-item">
+          <Link to="/">Котур</Link>
+        </div>
+        <div className="header-nav-item">
+          <Link to="/aboutUs">За нас</Link>
+        </div>
         <div
           className="header-dropdown-container"
           onMouseEnter={() => setIsDropdownOpen(true)}
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
-          <span className="header-nav-item">Настани</span>
+          <span className="header-nav-item">
+            <Link to="/events">Настани</Link>
+          </span>
           <div
             className={`header-dropdown-content ${
               isDropdownOpen ? "open" : ""
@@ -28,7 +35,9 @@ const Header: React.FC = () => {
             <div className="header-dropdown-item">Останати</div>
           </div>
         </div>
-        <div className="header-nav-item">Архива</div>
+        <div className="header-nav-item">
+          <Link to="/gallery">Архива</Link>
+        </div>
       </nav>
 
       <button className="header-login-button">Најави се</button>

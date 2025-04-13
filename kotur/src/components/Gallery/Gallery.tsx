@@ -30,7 +30,7 @@ function Gallery() {
         <Gallery_carousel_3 />
       </div>
       <div className="gallery-expand-button d-flex justify-content-center align-items-center">
-        <button className="gallery-expand-btn" onClick={toggleShowMore}>
+        <button className="btn gallery-expand-btn" onClick={toggleShowMore}>
           {showMore ? "Прикажи Помалку" : "Види Повеќе"}
         </button>
       </div>

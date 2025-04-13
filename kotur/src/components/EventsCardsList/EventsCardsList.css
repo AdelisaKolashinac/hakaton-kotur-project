@@ -1,9 +1,8 @@
 .events-cards-list {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
     url("../../../public/Img/Denim.svg");
-  padding: 15px;
+  padding: 30px 0;
   width: 100%;
-  min-height: 10rem;
   overflow: hidden;
 }
 
