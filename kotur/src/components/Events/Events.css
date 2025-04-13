@@ -72,3 +72,25 @@
   transform: rotate(11deg) translateX(0%) translateY(-60%);
   display: block;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-to-gallery {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.btn-to-gallery:hover {
+  background-color: #817f7f9b;
+  color: white;
+  transition: all 0.3s ease;
+}

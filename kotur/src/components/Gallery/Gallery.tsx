@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import "./Gallery.css";
-import Gallery_carousel_1 from "./Gallery_carousel_1";
-import Gallery_carousel_2 from "./Gallery_carousel_2";
-import Gallery_carousel_3 from "./Gallery_carousel_3";
-import Gallery_carousel_4 from "./Gallery_carousel_4";
-import Gallery_carousel_5 from "./Gallery_carousel_5";
-import Gallery_carousel_6 from "./Gallery_carousel_6";
+import Gallery_carousel_1 from "./Gallery_Carousels/Gallery_carousel_1";
+import Gallery_carousel_2 from "./Gallery_Carousels/Gallery_carousel_2";
+import Gallery_carousel_3 from "./Gallery_Carousels/Gallery_carousel_3";
+import Gallery_carousel_4 from "./Gallery_Carousels/Gallery_carousel_4";
+import Gallery_carousel_5 from "./Gallery_Carousels/Gallery_carousel_5";
+import Gallery_carousel_6 from "./Gallery_Carousels/Gallery_carousel_6";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-multi-carousel/lib/styles.css";
 

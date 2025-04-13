@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Gallery.css";
+import "../Gallery.css";
 
 function Gallery_carousel_3() {
   const carouselRef = useRef(null);

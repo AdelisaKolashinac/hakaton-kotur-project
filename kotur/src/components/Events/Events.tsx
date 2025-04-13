@@ -12,6 +12,9 @@ function Events() {
       <Banner />
       <Calendar />
       <EventsCardsList />
+      <div className="btn-container">
+        <button className="btn-to-gallery">Погледни Архива</button>
+      </div>
       <Footer />
     </div>
   );

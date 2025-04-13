@@ -1,3 +1,4 @@
 .landing-page {
-    background-color: #cad1c3;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+    url("../../../public/Img/Denim.svg");
 }

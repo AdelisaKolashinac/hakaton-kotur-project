@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Gallery.css";
+import "../Gallery.css";
 
-function Gallery_carousel_1() {
+function Gallery_carousel_4() {
   const carouselRef = useRef(null);
 
   const responsive = {
@@ -24,6 +24,7 @@ function Gallery_carousel_1() {
     },
   };
 
+  // Create a continuous scrolling effect
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
@@ -68,11 +69,11 @@ function Gallery_carousel_1() {
   return (
     <div className="gallery-event">
       <div className="gallery-event-info d-flex flex-column align-items-start justify-content-center">
-        <h3 className="gallery-h3">
-          Пролетна <br /> квечерина
-        </h3>
+        <h3 className="gallery-h3">Filler 1</h3>
         <p className="gallery-event-info-p">
-          Мис Стон вкусни закуски + аперативни коктели
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+          voluptatum repellat unde dignissimos veniam maxime voluptas doloremque
+          suscipit numquam fuga.
         </p>
       </div>
       <div className="gallery-carousel-container">
@@ -90,28 +91,16 @@ function Gallery_carousel_1() {
           shouldResetAutoplay={false}
         >
           <div>
-            <img
-              src="/Img/Galerija/proletna-kvecerina-1.jpg"
-              alt="proletna-kvecerina-1"
-            />
+            <img src="/Img/Galerija/filler1-1.png" alt="filler1-1" />
           </div>
           <div>
-            <img
-              src="/Img/Galerija/proletna-kvecerina-2.jpg"
-              alt="proletna-kvecerina-2"
-            />
+            <img src="/Img/Galerija/filler1-2.png" alt="filler1-2" />
           </div>
           <div>
-            <img
-              src="/Img/Galerija/proletna-kvecerina-3.jpg"
-              alt="proletna-kvecerina-3"
-            />
+            <img src="/Img/Galerija/filler1-3.png" alt="filler1-3" />
           </div>
           <div>
-            <img
-              src="/Img/Galerija/proletna-kvecerina-4.jpg"
-              alt="proletna-kvecerina-4"
-            />
+            <img src="/Img/Galerija/filler1-4.png" alt="filler1-4" />
           </div>
         </Carousel>
       </div>
@@ -119,4 +108,4 @@ function Gallery_carousel_1() {
   );
 }
 
-export default Gallery_carousel_1;
+export default Gallery_carousel_4;

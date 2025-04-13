@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Gallery.css";
+import "../Gallery.css";
 
-function Gallery_carousel_5() {
+function Gallery_carousel_2() {
   const carouselRef = useRef(null);
 
   const responsive = {
@@ -69,7 +69,7 @@ function Gallery_carousel_5() {
   return (
     <div className="gallery-event">
       <div className="gallery-event-info d-flex flex-column align-items-start justify-content-center">
-        <h3 className="gallery-h3">Filler 2</h3>
+        <h3 className="gallery-h3">Бар Училница</h3>
         <p className="gallery-event-info-p">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
           voluptatum repellat unde dignissimos veniam maxime voluptas doloremque
@@ -91,16 +91,16 @@ function Gallery_carousel_5() {
           shouldResetAutoplay={false}
         >
           <div>
-            <img src="/Img/Galerija/filler2-1.png" alt="filler2-1" />
+            <img src="/Img/Galerija/bar-ucilnica-1.jpg" alt="bar-ucilnica-1" />
           </div>
           <div>
-            <img src="/Img/Galerija/filler2-2.png" alt="filler2-2" />
+            <img src="/Img/Galerija/bar-ucilnica-2.jpg" alt="bar-ucilnica-2" />
           </div>
           <div>
-            <img src="/Img/Galerija/filler2-3.png" alt="filler2-3" />
+            <img src="/Img/Galerija/bar-ucilnica-3.jpg" alt="bar-ucilnica-3" />
           </div>
           <div>
-            <img src="/Img/Galerija/filler2-4.png" alt="filler2-4" />
+            <img src="/Img/Galerija/bar-ucilnica-4.jpg" alt="bar-ucilnica-4" />
           </div>
         </Carousel>
       </div>
@@ -108,4 +108,4 @@ function Gallery_carousel_5() {
   );
 }
 
-export default Gallery_carousel_5;
+export default Gallery_carousel_2;
