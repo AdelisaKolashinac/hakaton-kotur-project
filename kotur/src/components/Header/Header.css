@@ -113,3 +113,135 @@
   color: rgb(0, 0, 0);
   border-color: rgb(220, 219, 219);
 }
+
+/* Mobile Menu Styles */
+.mobile-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1010;
+}
+
+.mobile-menu-button img {
+  width: 30px;
+  height: auto;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-nav-item {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.mobile-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+
+.mobile-dropdown-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  margin-left: 0;
+  padding: 0;
+}
+
+.mobile-dropdown-container.open {
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.mobile-dropdown-item {
+  color: white;
+  padding: 15px 0 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  display: block;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-login-button {
+  margin-top: 30px;
+}
+
+.mobile-login-button button {
+  width: 100%;
+  background: white;
+  border: 1px solid white;
+  color: black;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.mobile-login-button button:hover {
+  background: rgb(220, 219, 219);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .header-logo {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-container {
+    display: none;
+  }
+}
