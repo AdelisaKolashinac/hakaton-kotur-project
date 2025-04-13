@@ -171,8 +171,8 @@ const MenuFilterSection = () => {
         ))}
       </div>
       <h2>{selectedCategory}</h2>
-      <div className="menu-items-section row">
-        <div className="menu-items-card col-sm-12 col-lg-7">
+      <div className="menu-items-section">
+        <div className="menu-items-content">
           <div className="menu-items-card-container">
             {cardsToDisplay.map((card) => (
               <MenuFilterCard key={card.id} card={card} />
@@ -187,7 +187,7 @@ const MenuFilterSection = () => {
             </button>
           )}
         </div>
-        <div className="recommendations-cards col-sm-12 col-lg-5">
+        <div className="recommendations-cards">
           <RecommendationCard />
           <RecommendationCard />
         </div>
