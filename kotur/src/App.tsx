@@ -12,10 +12,7 @@ import Events from "./components/Events/Events";
 function App() {
   return (
     <>
-      {/* <LandingPage /> */}
-      {/* <AboutUs /> */}
-      {/* <Gallery /> */}
-      <Events />
+      <LandingPage />
     </>
   );
 }
