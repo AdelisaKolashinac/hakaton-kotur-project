@@ -13,9 +13,12 @@ import { Route, Routes } from "react-router-dom";
 import Gallery from "./components/Gallery/Gallery";
 import Events from "./components/Events/Events";
 import AboutUs from "./components/AboutUs/AboutUs";
+import ScrollToTop from "./utils/ScrollToTop";
+
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/aboutUs" element={<AboutUs />} />

@@ -77,23 +77,18 @@ footer .footer-kotur .motto {
   font-size: 13px;
 }
 
-@media (max-width: 1440px) {
-  footer {
-    min-height: 80vh;
-  }
-
-  footer .footer-content {
-    width: 80%;
-  }
-}
-
 @media (max-width: 768px) {
   footer {
     flex-direction: column;
   }
 
   footer .footer-content {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .footer-kotur {
+    order: -1;
   }
 
   footer .footer-kotur h2 {

@@ -6,8 +6,10 @@ interface ServicesCardProps {
 }
 
 const ServicesCard = ({ card }: ServicesCardProps) => {
+  const link = card.pageLink ? card.pageLink : `/aboutus#${card.hashLink}`;
+
   return (
-    <Link to="/aboutUs" className="services-card">
+    <Link to={link} className="services-card">
       <div className="services-card-img">
         <img src={card.img} alt={card.title} />
         <div className="services-card-icon">

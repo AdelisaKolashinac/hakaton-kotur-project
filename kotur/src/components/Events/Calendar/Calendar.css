@@ -16,7 +16,11 @@
   display: flex;
   gap: 8px;
   margin-bottom: 48px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #121212;
 }
 
 .month-tab {
@@ -29,6 +33,7 @@
   transition: all 0.3s ease;
   min-width: 60px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .month-tab:hover {
@@ -41,20 +46,249 @@
   border-color: white;
 }
 
-.calendar-content {
-  display: flex;
-  border-top: 1px solid #333;
-  min-height: 300px;
+/* Desktop and Tablet Layout */
+@media (min-width: 577px) {
+  .calendar-layout {
+    display: flex;
+    border-top: 1px solid #333;
+    min-height: 300px;
+  }
+
+  .current-date-wrapper {
+    width: 20%;
+    min-width: 150px;
+    padding: 32px 16px;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .weeks-stack {
+    display: flex;
+    flex: 1;
+    width: 80%;
+  }
+
+  .week-item {
+    min-height: 200px;
+    border-right: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .week-item:last-child {
+    border-right: none;
+  }
+
+  .week-item.active {
+    background-color: #1a1a1a;
+    flex: 2;
+  }
+
+  .week-item:not(.active) {
+    flex: 1;
+  }
+
+  .week-item.active::after {
+    display: none;
+  }
 }
 
-.current-date-column {
-  width: 20%;
-  min-width: 150px;
-  padding: 32px 16px;
-  border-right: 1px solid #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/* Mobile Layout - Only Small Screens */
+@media (max-width: 576px) {
+  .calendar-container {
+    padding: 30px 20px 60px;
+    background-color: #141414;
+  }
+
+  .calendar-title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .month-tabs {
+    margin-bottom: 32px;
+  }
+
+  .calendar-layout {
+    border-top: 1px solid #333;
+    background-color: #121212;
+  }
+
+  .current-date-wrapper {
+    padding: 24px 16px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .weeks-stack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .week-item {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #333;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .week-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .week-item.active {
+    background-color: #1a1a1a;
+    border-color: #333;
+  }
+
+  .week-item.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+  }
+
+  .calendar-events {
+    padding: 5px 0;
+  }
+
+  .event-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .event-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .calendar-event-label {
+    text-align: left;
+    margin-top: 0;
+    font-size: 12px;
+  }
+
+  .event-item p {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .learn-more-container {
+    padding-top: 5px;
+  }
+
+  .learn-more {
+    padding: 5px 0;
+    font-size: 13px;
+  }
+
+  .week-header {
+    padding: 15px 15px 12px;
+    border-bottom: none;
+  }
+
+  .week-header h3 {
+    font-size: 22px;
+    text-align: right;
+    color: white;
+    font-weight: 500;
+  }
+
+  .week-content {
+    padding: 0 15px 15px;
+  }
+
+  .weeks-stack {
+    padding: 15px 10px;
+  }
+
+  .week-item {
+    margin-bottom: 12px;
+    background-color: #1a1a1a;
+  }
+
+  .calendar-events {
+    padding: 5px 0;
+  }
+
+  .event-item {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    border-bottom: none;
+  }
+
+  .calendar-event-label {
+    text-align: right;
+    margin-top: 0;
+    font-size: 12px;
+    color: white;
+  }
+
+  .event-item p {
+    text-align: right;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .learn-more-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .add-icon {
+    font-size: 16px;
+  }
+
+  .learn-more {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+}
+
+/* Very Small Mobile Screens */
+@media (max-width: 400px) {
+  .calendar-container {
+    padding: 20px 15px 40px;
+  }
+
+  .calendar-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .month-tabs {
+    gap: 4px;
+  }
+
+  .month-tab {
+    padding: 6px 10px;
+    font-size: 14px;
+    min-width: 50px;
+  }
 }
 
 .current-date {
@@ -87,7 +321,6 @@
   cursor: pointer;
   padding: 0;
   font-size: 14px;
-  margin-top: 16px;
 }
 
 .add-icon {
@@ -104,27 +337,6 @@
   margin-left: 5px;
 }
 
-.weeks-columns {
-  display: flex;
-  flex: 1;
-  width: 80%;
-}
-
-.week-column {
-  min-height: 200px;
-  border-right: 1px solid #333;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: #121212;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.week-column:last-child {
-  border-right: none;
-}
-
 .week-header {
   padding: 24px 16px 8px;
   text-align: center;
@@ -138,13 +350,12 @@
   transition: color 0.3s ease;
 }
 
-.week-column.active .week-header h3 {
+.week-item.active .week-header h3 {
   color: white;
 }
 
 .week-content {
   padding: 16px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -152,7 +363,7 @@
   opacity: 0.6;
 }
 
-.week-column.active .week-content {
+.week-item.active .week-content {
   opacity: 1;
 }
 
@@ -201,33 +412,6 @@
   color: white;
 }
 
-.week-column.active {
-  background-color: #1a1a1a;
-  flex: 2;
-}
-
-.week-column:not(.active) {
-  flex: 1;
-}
-
-@media (max-width: 992px) {
-  .calendar-content {
-    flex-direction: column;
-  }
-
-  .current-date-column {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #333;
-  }
-
-  .weeks-columns {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .week-column {
-    flex-basis: 50% !important;
-    border-bottom: 1px solid #333;
-  }
+@media (max-width: 768px) {
+  /* Remove this entire media query - these styles are already handled in the small screen section */
 }

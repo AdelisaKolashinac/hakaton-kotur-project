@@ -29,13 +29,12 @@
 }
 
 .angled-image-container::before {
+  content: "";
   position: absolute;
   left: 10%;
   top: 50%;
   width: 30px;
   height: 55px;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 25px 12px rgba(255, 255, 255, 0.6);
   z-index: 2;
   transform: translateY(-50%);
 }
@@ -57,7 +56,6 @@
   color: white;
   text-transform: uppercase;
   white-space: nowrap;
-  letter-spacing: 15px;
   transform: rotate(-10deg) translateX(0%) translateY(60%);
   display: block;
 }
@@ -68,7 +66,6 @@
   color: white;
   text-transform: uppercase;
   white-space: nowrap;
-  letter-spacing: 10px;
   transform: rotate(11deg) translateX(0%) translateY(-60%);
   display: block;
 }
@@ -87,10 +84,95 @@
   margin-bottom: 70px;
   width: 250px;
   transition: all 0.3s ease;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-to-gallery:hover {
   background-color: #817f7f9b;
   color: white;
   transition: all 0.3s ease;
+}
+
+/* Tablet Banner Styles */
+@media (max-width: 992px) {
+  .banner-section {
+    height: 70vh;
+  }
+
+  .angled-image {
+    clip-path: polygon(0 50%, 0 30%, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  .kotur {
+    font-size: 48px;
+    transform: rotate(-10deg) translateX(0%) translateY(70%);
+  }
+
+  .dzirni-festival {
+    font-size: 48px;
+    transform: rotate(11deg) translateX(0%) translateY(-70%);
+  }
+
+  .angled-image-container::before {
+    left: 8%;
+    width: 25px;
+    height: 45px;
+  }
+}
+
+/* Mobile Banner Styles */
+@media (max-width: 576px) {
+  .banner-section {
+    height: 60vh;
+  }
+
+  .angled-image {
+    clip-path: polygon(0 45%, 0 30%, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  .kotur {
+    font-size: 28px;
+    transform: rotate(-8deg) translateX(0%) translateY(80%);
+  }
+
+  .dzirni-festival {
+    font-size: 24px;
+    transform: rotate(26deg) translateX(-10%) translateY(-140%);
+  }
+
+  .btn-to-gallery {
+    width: 200px;
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+
+  .angled-image-container::before {
+    left: 5%;
+    width: 20px;
+    height: 40px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 400px) {
+  .banner-section {
+    height: 50vh;
+  }
+
+  .kotur {
+    font-size: 24px;
+  }
+
+  .dzirni-festival {
+    font-size: 20px;
+  }
+
+  .angled-image-container::before {
+    width: 15px;
+    height: 30px;
+  }
 }

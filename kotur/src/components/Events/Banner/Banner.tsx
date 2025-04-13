@@ -1,8 +1,9 @@
-import "./Events.css";
+import React from "react";
+import "../Events.css";
 
 const Banner: React.FC = () => {
   return (
-    <section className="banner-section bg-black">
+    <section className="banner-section">
       <div className="angled-image-container">
         <div className="angled-image"></div>
         <div className="festival-text">
