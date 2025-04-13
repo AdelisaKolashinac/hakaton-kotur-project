@@ -63,6 +63,14 @@
   width: calc(100% - 16px);
 }
 
+.header-nav-item.active {
+  color: white;
+}
+
+.header-nav-item.active::after {
+  width: calc(100% - 16px);
+}
+
 .header-dropdown-container {
   position: relative;
 }
@@ -162,6 +170,31 @@
   text-decoration: none;
   font-size: 18px;
   display: block;
+}
+
+.mobile-nav-item.active,
+.mobile-dropdown-item.active {
+  background-color: transparent;
+}
+
+.mobile-nav-item.active a {
+  font-weight: 500;
+}
+
+.mobile-dropdown-item.active {
+  font-weight: 500;
+  background-color: transparent;
+  position: relative;
+}
+
+.mobile-dropdown-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: white;
 }
 
 .mobile-dropdown-header {

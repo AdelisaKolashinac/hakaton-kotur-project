@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -20,6 +23,13 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return currentPath === path;
+    }
+    return currentPath === path || currentPath.startsWith(path + "/");
+  };
+
   return (
     <header className="header">
       <div className="header-logo">
@@ -29,10 +39,14 @@ const Header: React.FC = () => {
       {!isMobile ? (
         <>
           <nav className="header-nav">
-            <div className="header-nav-item">
+            <div className={`header-nav-item ${isActive("/") ? "active" : ""}`}>
               <Link to="/">Котур</Link>
             </div>
-            <div className="header-nav-item">
+            <div
+              className={`header-nav-item ${
+                isActive("/aboutUs") ? "active" : ""
+              }`}
+            >
               <Link to="/aboutUs">За нас</Link>
             </div>
             <div
@@ -40,7 +54,11 @@ const Header: React.FC = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <span className="header-nav-item">
+              <span
+                className={`header-nav-item ${
+                  isActive("/events") ? "active" : ""
+                }`}
+              >
                 <Link to="/events">Настани</Link>
               </span>
               <div
@@ -52,7 +70,11 @@ const Header: React.FC = () => {
                 <div className="header-dropdown-item">Останати</div>
               </div>
             </div>
-            <div className="header-nav-item">
+            <div
+              className={`header-nav-item ${
+                isActive("/gallery") ? "active" : ""
+              }`}
+            >
               <Link to="/gallery">Архива</Link>
             </div>
           </nav>
@@ -69,18 +91,24 @@ const Header: React.FC = () => {
           </button>
 
           <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
-            <div className="mobile-nav-item">
+            <div className={`mobile-nav-item ${isActive("/") ? "active" : ""}`}>
               <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
                 Котур
               </Link>
             </div>
-            <div className="mobile-nav-item">
+            <div
+              className={`mobile-nav-item ${
+                isActive("/aboutUs") ? "active" : ""
+              }`}
+            >
               <Link to="/aboutUs" onClick={() => setIsMobileMenuOpen(false)}>
                 За нас
               </Link>
             </div>
             <div
-              className="mobile-nav-item mobile-dropdown-header"
+              className={`mobile-nav-item mobile-dropdown-header ${
+                isActive("/events") ? "active" : ""
+              }`}
               onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
             >
               <span>Настани</span>
@@ -99,14 +127,18 @@ const Header: React.FC = () => {
             >
               <Link
                 to="/events/zirni"
-                className="mobile-dropdown-item"
+                className={`mobile-dropdown-item ${
+                  isActive("/events/zirni") ? "active" : ""
+                }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Ѕирни
               </Link>
               <Link
                 to="/events/other"
-                className="mobile-dropdown-item"
+                className={`mobile-dropdown-item ${
+                  isActive("/events/other") ? "active" : ""
+                }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Останати
