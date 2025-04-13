@@ -24,7 +24,6 @@ function Gallery_carousel_2() {
     },
   };
 
-  // Create a continuous scrolling effect
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
