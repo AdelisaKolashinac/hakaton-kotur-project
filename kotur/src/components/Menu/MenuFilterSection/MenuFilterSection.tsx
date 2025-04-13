@@ -154,24 +154,25 @@ const MenuFilterSection = () => {
     <section className="menu-filter-section container">
       <div className="filter-buttons-container">
         {categories.map((category) => (
-          <button key={category} onClick={() => setSelectedCategory(category)}>
+          <button
+            key={category}
+            className={`${selectedCategory === category ? "active" : ""}`}
+            onClick={() => setSelectedCategory(category)}
+          >
             {category}
           </button>
         ))}
-        {/* className={`filter-button ${
-              selectedCategory === category ? "active" : ""
-            }`} */}
       </div>
       <h2>{selectedCategory}</h2>
       <div className="menu-items-section row">
-        <div className="menu-items-card col-7">
+        <div className="menu-items-card col-sm-12 col-lg-7">
           <div className="menu-items-card-container">
             {filteredCards.map((card) => (
               <MenuFilterCard key={card.id} card={card} />
             ))}
           </div>
         </div>
-        <div className="recommendations-cards col-5">
+        <div className="recommendations-cards col-sm-12 col-lg-5">
           <RecommendationCard />
           <RecommendationCard />
         </div>

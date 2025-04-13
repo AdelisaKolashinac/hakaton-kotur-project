@@ -17,6 +17,14 @@
   font-weight: 700;
 }
 
+.menu-filter-section .filter-buttons-container button.active {
+  border: 2px solid black;
+}
+
+.menu-filter-section .filter-buttons-container button:hover {
+  background-color: #b1b9ab;
+}
+
 .menu-filter-section h2 {
   text-align: center;
   font-weight: 600;
@@ -36,4 +44,21 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
+}
+
+@media (max-width: 768px) {
+  .menu-filter-section .filter-buttons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu-filter-section h2  {
+    display: none;
+  }
+
+  .menu .menu-items-card-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 40px 0;
+  }
 }

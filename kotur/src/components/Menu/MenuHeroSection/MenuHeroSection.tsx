@@ -2,7 +2,7 @@ const MenuHeroSection = () => {
   return (
     <section className="menu-hero-section">
       <div className="menu-hero-content">
-        <div>
+        <div className="menu-hero-text">
           <h1 className="menu-hero-title">Мени</h1>
           <p className="menu-hero-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores

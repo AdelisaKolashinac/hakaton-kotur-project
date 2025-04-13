@@ -6,7 +6,7 @@ const RecommendationCard = () => {
       <img
         src="./menu/recommendation-card-img.png"
         alt="Коктел"
-        className="mb-3"
+        className="my-3"
       />
       <p>Септември</p>
       <h2 className="recommendation-card-subtitle">

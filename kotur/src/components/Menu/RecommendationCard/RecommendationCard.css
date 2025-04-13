@@ -1,13 +1,13 @@
 .menu .recommendation-card {
-  background-color: #000;
+  background-color: #242424;
   color: white;
   text-align: center;
   transition: 0.3s ease;
   padding: 50px 30px;
 }
 
-.menu .recommendation-card {
-  width: 100%;
+.recommendation-card img {
+  max-width: 450px;
 }
 
 .menu .recommendation-card:hover {
@@ -25,4 +25,10 @@
 .menu .recommendation-card-description {
   font-size: 14px;
   text-align: start;
+}
+
+@media (max-width: 768px) {
+  .recommendation-card img {
+    max-width: 300px;
+  }
 }
