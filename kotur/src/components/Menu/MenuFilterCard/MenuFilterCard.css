@@ -1,5 +1,12 @@
+.menu-filter-card {
+  height: 100%;
+  width: 100%;
+}
+
 .menu-filter-card-img {
   position: relative;
+  width: 400px;
+  height: 350px;
 }
 
 .menu-filter-card-img img {

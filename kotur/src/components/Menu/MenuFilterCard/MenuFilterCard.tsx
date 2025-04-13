@@ -1,21 +1,19 @@
-import { MenuFilterCardType } from "../MenuFilterSection/MenuFilterSection";
+import { MenuFilterCardType } from "../Menu";
 
 interface MenuFilterCardProps {
-  card: MenuFilterCardType;
+  item: MenuFilterCardType;
 }
 
-const MenuFilterCard = ({ card }: MenuFilterCardProps) => {
+const MenuFilterCard = ({ item }: MenuFilterCardProps) => {
   return (
     <div className="menu-filter-card">
       <div className="menu-filter-card-img">
-        <img src={card.image} alt="Cocktail Image" />
+        <img src={item.image} alt="Cocktail Image" />
         <div className="overlay">
-          <h3 className="item-name">{card.itemName}</h3>
+          <h3 className="item-name">{item.name}</h3>
           <p className="ingredients-label">Ingredients:</p>
           <ul className="item-ingredients">
-            {card.itemIngredients.map((ing, i) => (
-              <li key={i}>{ing}</li>
-            ))}
+            {item.ingredients}
           </ul>
         </div>
       </div>

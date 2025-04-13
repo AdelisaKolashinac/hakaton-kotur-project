@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Banner from "./Banner/Banner";
 import Calendar from "./Calendar/Calendar";
 import "./Events.css";
@@ -7,6 +7,7 @@ import EventsCardsList from "../EventsCardsList/EventsCardsList";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 function Events() {
+
   useEffect(() => {
     const fetchedData = async () => {
       fetch("https://f04d-62-162-133-188.ngrok-free.app/api/events", {

@@ -3,11 +3,17 @@
   color: white;
   text-align: center;
   transition: 0.3s ease;
-  padding: 50px 30px;
+  padding: 16px;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .recommendation-card img {
-  max-width: 450px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 .menu .recommendation-card:hover {
@@ -15,16 +21,26 @@
   transform: scale(1.02);
 }
 
+.menu .recommendation-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
 .menu .recommendation-card-subtitle {
   color: #cabb63b6;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
-  padding: 20px 0;
+  padding: 12px 0;
 }
 
 .menu .recommendation-card-description {
   font-size: 14px;
+  line-height: 1.4;
   text-align: start;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
