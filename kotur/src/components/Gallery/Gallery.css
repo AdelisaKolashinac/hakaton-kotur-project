@@ -3,11 +3,11 @@ body {
       rgba(132, 134, 129, 0.593),
       rgba(132, 134, 129, 0.593)
     ),
-    url("/public/Img/Denim.svg");
+    url("/Img/Denim.svg");
 }
 
 .gallery-hero-banner {
-  background-image: url("/public/Img/Galerija/gallery-hero-background.png");
+  background-image: url("/Img/Galerija/gallery-hero-background.png");
   background-size: cover;
   background-position: center 70%;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ body {
 }
 
 .gallery-event {
-  background-image: url("/public/Img/Galerija/background.svg");
+  background-image: url("/Img/Galerija/background.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
