@@ -33,12 +33,16 @@ const cards: EventCardType[] = [
 ];
 
 const EventsCardsList = () => {
+  const repeatedCards = [...cards, ...cards, ...cards];
+
   return (
     <section className="events-cards-list">
-      <div className="card-container">
-        {cards.map((card) => (
-          <EventCard key={card.id} card={card} />
-        ))}
+      <div className="events-cards-wrapper">
+        <div className="card-container">
+          {repeatedCards.map((card, index) => (
+            <EventCard key={`${card.id}-${index}`} card={card} />
+          ))}
+        </div>
       </div>
     </section>
   );

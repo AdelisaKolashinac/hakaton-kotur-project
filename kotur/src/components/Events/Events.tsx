@@ -5,6 +5,7 @@ import "./Events.css";
 import Header from "../Header/Header";
 import EventsCardsList from "../EventsCardsList/EventsCardsList";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 function Events() {
   return (
     <div>
@@ -13,7 +14,7 @@ function Events() {
       <Calendar />
       <EventsCardsList />
       <div className="btn-container">
-        <button className="btn-to-gallery">Погледни Архива</button>
+        <Link to="/gallery" className="btn btn-to-gallery">Погледни Архива</Link>
       </div>
       <Footer />
     </div>

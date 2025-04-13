@@ -1,0 +1,64 @@
+.menu-filter-section {
+  padding: 50px 0;
+}
+
+.menu-filter-section .filter-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.menu-filter-section .filter-buttons-container button {
+  width: 180px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.menu-filter-section .filter-buttons-container button.active {
+  border: 2px solid black;
+}
+
+.menu-filter-section .filter-buttons-container button:hover {
+  background-color: #b1b9ab;
+}
+
+.menu-filter-section h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  color: black;
+  padding: 50px 0;
+}
+
+.menu .menu-items-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.menu .recommendations-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+@media (max-width: 768px) {
+  .menu-filter-section .filter-buttons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu-filter-section h2  {
+    display: none;
+  }
+
+  .menu .menu-items-card-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 40px 0;
+  }
+}

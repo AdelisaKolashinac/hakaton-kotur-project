@@ -44,3 +44,14 @@
 .testimonials .testimonials-card-user .user-name {
   margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+  .testimonials .testimonials-card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    max-height: calc(4 * 200px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
