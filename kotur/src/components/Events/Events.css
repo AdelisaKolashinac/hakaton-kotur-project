@@ -173,3 +173,23 @@
     height: 30px;
   }
 }
+
+/* Loading and Error Styles */
+.loading-indicator {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+.error-message {
+  padding: 20px;
+  text-align: center;
+  color: #e53935;
+  background-color: rgba(229, 57, 53, 0.1);
+  border-radius: 4px;
+  margin: 20px auto;
+  max-width: 80%;
+  font-weight: 500;
+}
