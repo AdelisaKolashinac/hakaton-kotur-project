@@ -3,6 +3,8 @@
   text-align: center;
   width: 300px;
   position: relative;
+  cursor: pointer;
+  z-index: 99;
 }
 
 .event-card.even {

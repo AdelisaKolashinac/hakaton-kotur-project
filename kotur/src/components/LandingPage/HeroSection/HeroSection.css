@@ -1,4 +1,3 @@
-/* Hero Section */
 .landing-page .hero-section {
   background-image: url("./landingPage/image000651.png");
   background-size: cover;
@@ -11,20 +10,11 @@
 
 .landing-page .hero-section .logo-container {
   position: absolute;
-  top: 22%;
+  top: 25%;
   left: 52%;
   transform: translate(-20%, -50%);
   z-index: 10;
 }
-
-/* .landing-page .hero-section .logo-container .logo {
-      transition: transform 1s linear;
-      cursor: pointer;
-    }
-  
-  .landing-page .hero-section .logo-container .logo:hover {
-    transform: rotate(360deg);
-  } */
 
 .landing-page .hero-section .logo-container .logo {
   width: 100%;
@@ -43,10 +33,19 @@
   }
 }
 
-/* Mobile Version */
 @media (max-width: 1024px) {
   .landing-page .hero-section .logo-container {
     top: 27%;
     left: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page .hero-section {
+    height: calc(70vh + 110px);
+  }
+
+  .landing-page .hero-section .logo-container .logo {
+    max-width: 200px;
   }
 }

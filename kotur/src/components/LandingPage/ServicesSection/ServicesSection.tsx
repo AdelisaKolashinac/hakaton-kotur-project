@@ -36,7 +36,7 @@ const servicesCards: ServicesCardType[] = [
   },
   {
     id: 4,
-    img: "./landingPage/ketering.png",
+    img: "./landingPage/kotur-card.png",
     icon: "./landingPage/ketering-icon.png",
     title: "Котур",
     description:
@@ -45,17 +45,16 @@ const servicesCards: ServicesCardType[] = [
 ];
 
 const ServicesSection = () => {
+  const repeatedCards = [...servicesCards, ...servicesCards, ...servicesCards];
+
   return (
     <div className="services-section">
       <h2 className="services-section-title">Услуги</h2>
-      <div className="rectangle-one"></div>
-      <div className="rectangle-two"></div>
       <div className="services-card-container">
-        {servicesCards.map((card) => (
-          <ServicesCard key={card.id} card={card} />
+        {repeatedCards.map((card, index) => (
+          <ServicesCard key={`${card.id}-${index}`} card={card} />
         ))}
       </div>
-      <div className="rectangle-three"></div>
     </div>
   );
 };

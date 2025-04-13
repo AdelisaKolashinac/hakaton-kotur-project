@@ -1,23 +1,28 @@
 .events-cards-list {
-  position: relative;
-  display: flex;
-  overflow-x: hidden;
-  padding: 50px;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
     url("../../../public/Img/Denim.svg");
+  padding: 15px;
+  width: 100%;
+  min-height: 10rem;
+  overflow: hidden;
 }
 
 .events-cards-list .card-container {
   display: flex;
   gap: 20px;
-  animation: moveRightToLeft 10s linear infinite;
+  width: max-content;
+  animation: swipe 10s linear infinite;
 }
 
-@keyframes moveRightToLeft {
+.events-cards-list:hover .card-container {
+  animation-play-state: paused;
+}
+
+@keyframes swipe {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-33.33%);
   }
 }

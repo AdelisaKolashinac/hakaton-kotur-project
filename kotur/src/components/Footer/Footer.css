@@ -3,6 +3,7 @@ footer {
   background-image: url("./landingPage/footer-bg.png");
   color: #cad1c3;
   text-align: center;
+  padding-top: 40px;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -83,5 +84,19 @@ footer .footer-kotur .motto {
 
   footer .footer-content {
     width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer .footer-content {
+    flex-direction: column-reverse;
+  }
+
+  footer .footer-kotur h2 {
+    margin-top: 30px;
   }
 }
