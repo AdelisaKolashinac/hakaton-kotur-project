@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "./Banner";
+import Banner from "./Banner/Banner";
 import Calendar from "./Calendar/Calendar";
 import "./Events.css";
 import Header from "../Header/Header";
@@ -14,7 +14,9 @@ function Events() {
       <Calendar />
       <EventsCardsList />
       <div className="btn-container">
-        <Link to="/gallery" className="btn btn-to-gallery">Погледни Архива</Link>
+        <Link to="/gallery" className="btn btn-to-gallery">
+          Погледни Архива
+        </Link>
       </div>
       <Footer />
     </div>

@@ -73,8 +73,8 @@ const Calendar: React.FC = () => {
         ))}
       </div>
 
-      <div className="calendar-content">
-        <div className="current-date-column">
+      <div className="calendar-layout">
+        <div className="current-date-wrapper">
           <div className="current-date">
             <div className="day-name">Недела</div>
             <div className="date-number">13.04</div>
@@ -88,11 +88,11 @@ const Calendar: React.FC = () => {
           </button>
         </div>
 
-        <div className="weeks-columns">
+        <div className="weeks-stack">
           {[0, 1, 2, 3].map((weekIndex) => (
             <div
               key={weekIndex}
-              className={`week-column ${
+              className={`week-item ${
                 selectedWeek === weekIndex ? "active" : ""
               }`}
               onClick={() => handleWeekSelect(weekIndex)}
