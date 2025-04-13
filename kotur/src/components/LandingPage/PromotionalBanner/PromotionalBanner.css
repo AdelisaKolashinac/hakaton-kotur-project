@@ -1,0 +1,15 @@
+.landing-page .promotional-banner {
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.landing-page .promotional-banner img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .landing-page .promotional-banner {
+    display: none;
+  }
+}

@@ -1,5 +1,8 @@
 import TestimonialsCard from "./TestimonialsCard/TestimonialsCard";
+<<<<<<< HEAD
 import "./Testimonials.css";
+=======
+>>>>>>> 41a96168ba104f923fd6288214425277349f788e
 
 export interface TestimonialsCardType {
   id: number;
@@ -42,7 +45,11 @@ const testimonialsCards: TestimonialsCardType[] = [
 const Testimonials = () => {
   return (
     <section className="testimonials">
+<<<<<<< HEAD
       <img src="./ImgsAboutUs/spoon.jpg" alt="Spoon Icon" />
+=======
+      <img src="./landingPage/spoon.png" alt="Spoon Icon" />
+>>>>>>> 41a96168ba104f923fd6288214425277349f788e
       <h2>Што велат нашите задоволни клиенти</h2>
       <div className="testimonials-card-container">
         {testimonialsCards.map((card) => (

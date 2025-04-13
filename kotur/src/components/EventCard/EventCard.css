@@ -1,0 +1,65 @@
+.event-card {
+  padding: 15px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+}
+
+.event-card.even {
+  background-color: #000000;
+  color: #c0c6ba;
+}
+
+.event-card.odd {
+  background-color: #98a190;
+  color: #000000;
+}
+
+.event-card .calendar-icon {
+  background-color: #000000;
+  position: absolute;
+  padding: 15px;
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+}
+
+.event-card .calendar-icon img {
+  width: 20px;
+  display: flex;
+}
+
+.event-card .event-img img {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.event-card .event-name {
+  font-size: 18px;
+  padding: 7px 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.event-card .event-date {
+  font-size: 14px;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+.event-card.even .event-date {
+  border-bottom: 1px solid #c0c6ba;
+  border-top: 1px solid #c0c6ba;
+}
+
+.event-card.odd .event-date {
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+.event-card .event-time {
+  font-size: 14px;
+  margin-bottom: 0;
+  padding: 10px 0;
+}

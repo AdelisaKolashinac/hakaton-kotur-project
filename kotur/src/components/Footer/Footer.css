@@ -1,6 +1,10 @@
 footer {
   min-height: 60vh;
+<<<<<<< HEAD
   background-color: rgba(0, 0, 0, 0.918);
+=======
+  background-image: url("./landingPage/footer-bg.png");
+>>>>>>> 41a96168ba104f923fd6288214425277349f788e
   color: #cad1c3;
   text-align: center;
   display: flex;
