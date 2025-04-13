@@ -1,17 +1,17 @@
-const RecommendationCard = () => {
+import { MenuFilterCardType } from "../Menu";
+
+interface RecommendationCardProps {
+  card: MenuFilterCardType;
+}
+
+const RecommendationCard = ({ card }: RecommendationCardProps) => {
   return (
     <div className="recommendation-card text-white mb-4">
       <h5 className="recommendation-card-title mb-3">Популарно</h5>
 
-      <img
-        src="./menu/recommendation-card-img.png"
-        alt="Коктел"
-        className="my-3"
-      />
+      <img src={card.image} alt={card.name} className="my-3" />
       <p>Септември</p>
-      <h2 className="recommendation-card-subtitle">
-        Summer Cocktails and Mockatails
-      </h2>
+      <h2 className="recommendation-card-subtitle">{card.category}</h2>
       <p className="recommendation-card-description">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam odit
         corporis eveniet eum et qui, debitis porro optio, nesciunt rerum aut
