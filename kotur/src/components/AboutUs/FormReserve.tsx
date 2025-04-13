@@ -84,7 +84,6 @@ const FormReserve: React.FC = () => {
               </div>
             </div>
 
-            {/* Submit Button */}
             <div className="row">
               <div className="col-md-12 text-center">
                 <button type="submit" className="btn btn-light px-5 mt-3">
