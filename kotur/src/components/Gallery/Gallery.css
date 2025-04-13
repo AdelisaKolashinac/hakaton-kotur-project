@@ -3,11 +3,11 @@ body {
       rgba(132, 134, 129, 0.593),
       rgba(132, 134, 129, 0.593)
     ),
-    url("/public/Img/Denim.svg");
+    url("/Img/Denim.svg");
 }
 
 .gallery-hero-banner {
-  background-image: url("/public/Img/Galerija/gallery-hero-background.png");
+  background-image: url("/Img/Galerija/gallery-hero-background.png");
   background-size: cover;
   background-position: center 70%;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ body {
 }
 
 .gallery-event {
-  background-image: url("/public/Img/Galerija/background.svg");
+  background-image: url("/Img/Galerija/background.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,10 +79,12 @@ body {
 
 .gallery-expand-btn {
   width: 250px;
+  height: 50px;
+  background-color: white;
 }
 
 .gallery-expand-btn:hover {
-  background-color: #817f7f9b;
+  background-color: #d1c7c7db;
   color: white;
   transition: all 0.3s ease;
 }
@@ -103,7 +105,6 @@ body {
   position: relative;
 }
 
-/* Animation for smooth continuous scrolling */
 @keyframes smooth-scroll {
   0% {
     transform: translateX(0);
@@ -113,7 +114,6 @@ body {
   }
 }
 
-/* Fix for react-multi-carousel */
 .react-multi-carousel-list {
   width: 100%;
   height: 100%;

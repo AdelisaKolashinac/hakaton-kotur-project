@@ -2,12 +2,6 @@
   padding: 50px 0;
 }
 
-.menu-filter-section .menu-items-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-}
-
 .menu-filter-section .filter-buttons-container {
   display: flex;
   justify-content: center;
@@ -39,17 +33,21 @@
   padding: 50px 0;
 }
 
-.menu .menu-filter-section .menu-items-card-container {
+.menu-filter-section .menu-cards-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.menu-filter-section .menu-items-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 20px;
   row-gap: 40px;
 }
 
 .menu .menu-filter-section .recommendations-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
 }
 
 .menu .menu-filter-section .filter-show-more-btn {
@@ -60,10 +58,7 @@
   display: block;
 }
 
-@media (max-width: 768px) {
-  .menu-filter-section .menu-items-content {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 1024px) {
   .menu-filter-section .filter-buttons-container {
     flex-direction: column;
     align-items: center;
@@ -73,10 +68,14 @@
   .menu-filter-section h2 {
     display: none;
   }
+  .menu-filter-section .menu-cards-section {
+    grid-template-columns: 1fr;
+  }
 
-  .menu .menu-filter-section .menu-items-card-container {
+  .menu-filter-section .menu-items-container {
     grid-template-columns: 1fr;
     padding-top: 50px;
+    justify-items: center;
   }
 
   .menu .menu-filter-section .recommendations-cards {

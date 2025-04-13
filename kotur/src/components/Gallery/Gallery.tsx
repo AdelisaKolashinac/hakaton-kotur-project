@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import "./Gallery.css";
 import Gallery_carousel_1 from "./Gallery_Carousels/Gallery_carousel_1";
 import Gallery_carousel_2 from "./Gallery_Carousels/Gallery_carousel_2";
@@ -39,8 +40,10 @@ function Gallery() {
           <Gallery_carousel_4 />
           <Gallery_carousel_5 />
           <Gallery_carousel_6 />
+          <div className="empty-div"></div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
