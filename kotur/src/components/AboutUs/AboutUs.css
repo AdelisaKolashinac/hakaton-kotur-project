@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: calc(100vh + 78px);
   position: relative;
   display: flex;
   justify-content: center;
@@ -116,6 +116,16 @@
   width: 300px;
   height: 300px;
   transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .our-history::before,
+  .our-history::after,
+  .our-history .third-square,
+  .reserve-hall::before,
+  .reserve-hall::after {
+    display: none;
+  }
 }
 
 /*From Reserve*/
