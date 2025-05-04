@@ -12,14 +12,7 @@ import RecommendSection from "./RecommendSection/RecommendSection";
 import Testimonials from "../Testimonials/Testimonials";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-
-interface ApiEvent {
-  id: number;
-  name: string;
-  date: string;
-  time: string;
-  image: string;
-}
+import { ApiEvent } from "../../types/types";
 
 const LandingPage = () => {
   const [apiEvents, setApiEvents] = useState<ApiEvent[]>([]);

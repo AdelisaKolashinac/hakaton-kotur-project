@@ -15,7 +15,7 @@ const Footer = () => {
             "The best way to find yourself is to lose yourself in the service of
             others"
           </p>
-          <img src="./landingPage/spoon.svg" alt="Spoon Icon" />
+          <img src="./landingPage/light-spoon.svg" alt="Spoon Icon" />
           <div className="footer-social-media-icons">
             <a
               href="https://www.facebook.com/KoturKafeiFilm/?locale2=gl_ES&_rdr"

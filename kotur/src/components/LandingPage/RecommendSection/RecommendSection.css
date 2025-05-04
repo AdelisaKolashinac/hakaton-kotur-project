@@ -1,8 +1,62 @@
 .recommend-section {
   padding-top: 30px;
+  height: 80vh;
+  width: 100%;
+  background-image: url("./landingPage/recommended-section-img.png");
+  background-position: center;
+  background-size: cover;
 }
 
-.recommend-section img {
-  width: 100%;
-  height: auto;
+.recommend-section .layout {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommend-section .layout .title {
+  flex: 0 1 20%;
+}
+
+.recommend-section .layout h3 {
+  color: #c0c6ba;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .recommend-section .layout h3 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recommend-section .layout h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 435px) {
+  .recommend-section .layout {
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .recommend-section .layout h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .recommend-section .layout {
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .recommend-section .layout h3 {
+    font-size: 16px;
+  }
 }

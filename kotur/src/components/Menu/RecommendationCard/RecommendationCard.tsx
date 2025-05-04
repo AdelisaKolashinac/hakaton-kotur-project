@@ -1,7 +1,8 @@
-import { MenuFilterCardType } from "../Menu";
+import { MenuCardType } from "../../../types/types";
+
 
 interface RecommendationCardProps {
-  card: MenuFilterCardType;
+  card: MenuCardType;
 }
 
 const RecommendationCard = ({ card }: RecommendationCardProps) => {

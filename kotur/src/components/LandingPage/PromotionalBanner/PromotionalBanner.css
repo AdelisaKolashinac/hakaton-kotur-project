@@ -1,15 +1,87 @@
-.landing-page .promotional-banner {
+.landing-page .promotional {
   padding-top: 30px;
+  height: 70vh;
   overflow: hidden;
 }
 
-.landing-page .promotional-banner img {
+.landing-page .promotional .promotional__layout {
+  display: flex;
+  height: 100%;
+  background-color: black;
+}
+
+.landing-page .promotional .promotional__left {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page .promotional .promotional__date {
+  font-size: 48px;
+  font-weight: 300;
+  color: #c0c6ba;
+  margin-bottom: 0;
+}
+
+.landing-page .promotional .promotional__event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.landing-page .promotional .promotional__right {
+  flex: 1 1 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page .promotional .promotional__main-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.landing-page .promotional .promotional__button-group {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.landing-page .promotional .promotional__button {
+  border: none;
+  background-color: #42906c;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 10px 30px;
+  margin-right: 20px;
+}
+
+.landing-page .promotional .promotional__logo {
+  width: 100px;
+}
+
+@media (max-width: 1024px) {
+  .landing-page .promotional .promotional__left {
+    flex-direction: column;
+  }
+  .landing-page .promotional .promotional__zirni-img {
+    width: 300px;
+  }
+
+  .landing-page .promotional .promotional__festival-icon {
+    width: 150px;
+  }
+
+  .landing-page .promotional .promotional__date {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 768px) {
-  .landing-page .promotional-banner {
+  .landing-page .promotional {
     display: none;
   }
 }

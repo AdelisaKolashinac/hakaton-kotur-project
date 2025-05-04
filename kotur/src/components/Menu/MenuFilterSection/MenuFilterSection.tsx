@@ -2,10 +2,11 @@ import { useState } from "react";
 import MenuFilterCard from "../MenuFilterCard/MenuFilterCard";
 import RecommendationCard from "../RecommendationCard/RecommendationCard";
 import { useMediaQuery } from "react-responsive";
-import { MenuFilterCardType } from "../Menu";
+import { MenuCardType } from "../../../types/types";
+
 
 interface MenuFilterSectionProps {
-  menuItems: MenuFilterCardType[];
+  menuItems: MenuCardType[];
 }
 
 const MenuFilterSection = ({ menuItems }: MenuFilterSectionProps) => {
@@ -27,7 +28,7 @@ const MenuFilterSection = ({ menuItems }: MenuFilterSectionProps) => {
 
   // Get top 2 recommended cards per category
   const topRecommendedCards = [...filteredCards]
-    .sort((a, b) => b.is_recommended - a.is_recommended)
+    .sort((a, b) => b.recommended - a.recommended)
     .slice(0, 2);
 
   return (

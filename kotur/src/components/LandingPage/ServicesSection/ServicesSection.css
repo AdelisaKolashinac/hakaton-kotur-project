@@ -1,4 +1,4 @@
-.services-section {
+.landing-page .services {
   margin-top: 30px;
   padding: 50px 0;
   background-color: #000000;
@@ -6,25 +6,16 @@
   overflow: hidden;
 }
 
-.services-section .services-card-container {
+.landing-page .services .services__cardContainer {
   display: flex;
   gap: 20px;
-  padding: 50px 0;
   width: max-content;
-  animation: swipe 10s linear infinite;
+  animation: swipe 15s linear infinite;
 }
 
-.services-section:hover .services-card-container {
+.landing-page .services:hover .services__cardContainer {
   animation-play-state: paused;
 }
-
-.services-section .services-section-title {
-  font-size: 40px;
-  font-weight: 700;
-  color: #c0c6ba;
-  text-align: center;
-}
-
 
 @keyframes swipe {
   0% {
@@ -35,4 +26,16 @@
   }
 }
 
+.landing-page .services .services__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+}
 
+.landing-page .services .services__title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #c0c6ba;
+  text-align: center;
+}
