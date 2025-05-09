@@ -1,18 +1,15 @@
-.menu-filter-card {
+.menu-card {
   height: 100%;
-  width: 100%;
 }
 
-.menu-filter-card-img {
+.menu-card-img {
   position: relative;
-  width: 400px;
-  height: 350px;
+  height: 100%;
 }
 
-.menu-filter-card-img img {
+.menu-card-img img {
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 .overlay {
@@ -32,7 +29,7 @@
   text-align: center;
 }
 
-.menu-filter-card-img:hover .overlay {
+.menu-card-img:hover .overlay {
   opacity: 1;
 }
 

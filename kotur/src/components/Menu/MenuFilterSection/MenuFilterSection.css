@@ -18,7 +18,7 @@
 }
 
 .menu-filter-section .filter-buttons-container button.active {
-  border: 2px solid black;
+  border: 3px solid black;
 }
 
 .menu-filter-section .filter-buttons-container button:hover {
@@ -33,21 +33,27 @@
   padding: 50px 0;
 }
 
-.menu-filter-section .menu-cards-section {
+.menu-filter-section .menu-cards-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 40px 0;
 }
 
-.menu-filter-section .menu-items-container {
+.menu-filter-section .menu-cards-wrapper {
+  display: grid;
+}
+
+.menu-filter-section .menu-filter-cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 40px;
+  row-gap: 3rem;
+  column-gap: 2rem;
 }
 
-.menu .menu-filter-section .recommendations-cards {
+.menu .menu-filter-section .menu-recommendations-cards {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 30px;
 }
 
 .menu .menu-filter-section .filter-show-more-btn {
@@ -68,17 +74,23 @@
   .menu-filter-section h2 {
     display: none;
   }
-  .menu-filter-section .menu-cards-section {
+  .menu-filter-section .menu-cards-container {
     grid-template-columns: 1fr;
-  }
-
-  .menu-filter-section .menu-items-container {
-    grid-template-columns: 1fr;
-    padding-top: 50px;
-    justify-items: center;
   }
 
   .menu .menu-filter-section .recommendations-cards {
     gap: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .menu-filter-section .menu-cards-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .menu-filter-section .menu-filter-cards-container {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+    justify-items: center;
   }
 }

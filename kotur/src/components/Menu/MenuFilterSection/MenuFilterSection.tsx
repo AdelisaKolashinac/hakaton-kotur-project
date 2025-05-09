@@ -4,7 +4,6 @@ import RecommendationCard from "../RecommendationCard/RecommendationCard";
 import { useMediaQuery } from "react-responsive";
 import { MenuCardType } from "../../../types/types";
 
-
 interface MenuFilterSectionProps {
   menuItems: MenuCardType[];
 }
@@ -45,24 +44,27 @@ const MenuFilterSection = ({ menuItems }: MenuFilterSectionProps) => {
         ))}
       </div>
       <h2>{selectedCategory}</h2>
-      <div className="menu-cards-section">
-        {/* Menu Items Section */}
-        <div className="menu-items-container">
-          {cardsToDisplay.map((item) => (
-            <MenuFilterCard key={item.id} item={item} />
-          ))}
+      <div className="menu-cards-container">
+        {/* Menu Cards Section */}
+        <div className="menu-cards-wrapper">
+          <div className="menu-filter-cards-container">
+            {cardsToDisplay.map((item) => (
+              <MenuFilterCard key={item.id} item={item} />
+            ))}
+          </div>
+
+          {isMobileOrTablet && filteredCards.length > 3 && (
+            <button
+              className="filter-show-more-btn"
+              onClick={() => setShowAll((prev) => !prev)}
+            >
+              {showAll ? "Прикажи помалку" : "Прикажи повеќе"}
+            </button>
+          )}
         </div>
-        {isMobileOrTablet && filteredCards.length > 3 && (
-          <button
-            className="filter-show-more-btn"
-            onClick={() => setShowAll((prev) => !prev)}
-          >
-            {showAll ? "Прикажи помалку" : "Прикажи повеќе"}
-          </button>
-        )}
 
         {/* Recommendations Section */}
-        <div className="recommendations-cards">
+        <div className="menu-recommendations-cards">
           {topRecommendedCards.map((card) => (
             <RecommendationCard key={card.id} card={card} />
           ))}
