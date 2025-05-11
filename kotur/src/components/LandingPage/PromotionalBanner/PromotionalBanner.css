@@ -57,6 +57,7 @@
   font-weight: 700;
   padding: 10px 30px;
   margin-right: 20px;
+  visibility: hidden;
 }
 
 .landing-page .promotional .promotional__logo {
