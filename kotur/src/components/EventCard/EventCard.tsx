@@ -15,6 +15,7 @@ const EventCard = ({ card }: EventCardProps) => {
       // Extract day from date string like "април 13, 2025"
       const dayMatch = card.date.match(/\d+/);
       return dayMatch ? dayMatch[0] : "";
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e) {
       return "";
     }

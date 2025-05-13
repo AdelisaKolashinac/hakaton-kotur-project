@@ -134,12 +134,12 @@ const Calendar: React.FC<CalendarProps> = ({ events = [] }) => {
             </div>
             <div className="date-year">{currentYear}</div>
           </div>
-          <button className="add-event-btn">
+          {/* <button className="add-event-btn">
             <span className="add-text">
               <FontAwesomeIcon icon={faPlus} className="add-icon" />
               <span className="add-text-label">Додај/посети</span>
             </span>
-          </button>
+          </button> */}
         </div>
 
         <div className="weeks-stack">
