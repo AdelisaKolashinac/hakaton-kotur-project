@@ -5,35 +5,34 @@ import Header from "../Header/Header";
 import MenuHeroSection from "./MenuHeroSection/MenuHeroSection";
 import MenuFilterSection from "./MenuFilterSection/MenuFilterSection";
 import Footer from "../Footer/Footer";
-import { menuCards } from "../../data/data";
-// import { useEffect, useState } from "react";
-// import { MenuCardType } from "../../types/types";
+import { useEffect, useState } from "react";
+import { MenuCardType } from "../../types/types";
 
 const Menu = () => {
-  // const [menuItems, setMenuItems] = useState<MenuCardType[]>([]);
+  const [apiMenuItems, setApiMenuItems] = useState<MenuCardType[]>([]);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     fetch("https://4cc0-62-162-133-188.ngrok-free.app/api/menu", {
-  //       headers: {
-  //         "ngrok-skip-browser-warning": true,
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json",
-  //         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //       } as any,
-  //     })
-  //       .then((res) => res.json())
-  //       .then((data) => setMenuItems(data.data));
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      fetch("https://4cc0-62-162-133-188.ngrok-free.app/api/menu", {
+        headers: {
+          "ngrok-skip-browser-warning": true,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } as any,
+      })
+        .then((res) => res.json())
+        .then((data) => setApiMenuItems(data.data));
+    };
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
   return (
     <div className="menu" id="koktel-meni">
       <Header />
       <MenuHeroSection />
-      <MenuFilterSection menuItems={menuCards} />
+      <MenuFilterSection apiMenuItems={apiMenuItems} />
       <Footer />
     </div>
   );

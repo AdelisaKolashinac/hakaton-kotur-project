@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Banner from "./Banner/Banner";
 import Calendar from "./Calendar/Calendar";
 import "./Events.css";

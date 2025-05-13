@@ -52,6 +52,7 @@ const EventsCardsList = ({
 
       const month = macedonianMonths[date.getMonth()];
       return `${month} ${date.getDate()}, ${date.getFullYear()}`;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e) {
       return dateStr; // Return the original date if parsing fails
     }

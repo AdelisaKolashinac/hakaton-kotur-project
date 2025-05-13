@@ -3,20 +3,23 @@ import MenuFilterCard from "../MenuFilterCard/MenuFilterCard";
 import RecommendationCard from "../RecommendationCard/RecommendationCard";
 import { useMediaQuery } from "react-responsive";
 import { MenuCardType } from "../../../types/types";
+import { menuCards } from "../../../data/data";
 
 interface MenuFilterSectionProps {
-  menuItems: MenuCardType[];
+  apiMenuItems: MenuCardType[];
 }
 
-const MenuFilterSection = ({ menuItems }: MenuFilterSectionProps) => {
+const MenuFilterSection = ({ apiMenuItems }: MenuFilterSectionProps) => {
   const [selectedCategory, setSelectedCategory] = useState("Коктели");
   const [showAll, setShowAll] = useState(false);
 
+  const itemsToDisplay = apiMenuItems.length > 0 ? apiMenuItems : menuCards;
+
   const categories = Array.from(
-    new Set(menuItems.map((card) => card.category))
+    new Set(itemsToDisplay.map((card) => card.category))
   );
 
-  const filteredCards = menuItems.filter(
+  const filteredCards = itemsToDisplay.filter(
     (card) => card.category === selectedCategory
   );
 
