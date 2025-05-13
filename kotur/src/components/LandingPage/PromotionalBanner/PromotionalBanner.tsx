@@ -35,14 +35,6 @@ const PromotionalBanner = () => {
             alt="People celebrating at the promotional event"
             className="promotional__main-img"
           />
-          <div className="promotional__button-group">
-            <button className="promotional__button">Дознај повеќе</button>
-            <img
-              src="/landingPage/black-logo.png"
-              alt="Kotur black logo"
-              className="promotional__logo"
-            />
-          </div>
         </div>
       </div>
     </section>
