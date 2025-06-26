@@ -1,4 +1,4 @@
-# Adelisa Kolashinac, Dijana Galeski, Miodrag Trickovski  — Hakaton Project: Kotur Lounge Bar
+# Adelisa Kolashinac, Dijana Galeski, and Miodrag Trickovski  — Hakaton Project: Kotur Lounge Bar
 
 ## Table of Contents
 
@@ -53,9 +53,9 @@ Follow these steps to clone and set up the project:
 5. Install dependencies: npm i
 6. Run the project locally: npm run dev
 
-## What I Learned
+## What We Learned
 
-Through this project, I improved my React skills and gained real-world experience working with:
+Throughout this project, we gained valuable experience with:
 
 - React hooks and components structure
 - Fetching and submitting data with REST APIs
@@ -73,9 +73,9 @@ Here are some useful resources I used or recommend for learning and improving Re
 
 ## Author
 
-- **Adelisa Kolashinac**
-
-You can also find me on **GitHub** under the username **AdelisaKolashinac**.
+- **Adelisa Kolashinac** – [@AdelisaKolashinac](https://github.com/AdelisaKolashinac)
+- **Dijana Galeski**
+- **Miodrag Trickovski**
 
 ## Project Status
 
