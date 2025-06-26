@@ -1,4 +1,4 @@
-# Adelisa Kolashinac — Hakaton Project: Kotur Lounge Bar
+# Adelisa Kolashinac, Dijana Galeski, Miodrag Trickovski  — Hakaton Project: Kotur Lounge Bar
 
 ## Table of Contents
 
