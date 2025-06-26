@@ -1,0 +1,67 @@
+.landing-page .promotional {
+  padding-top: 30px;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.landing-page .promotional .promotional__layout {
+  display: flex;
+  height: 100%;
+  background-color: black;
+}
+
+.landing-page .promotional .promotional__left {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page .promotional .promotional__date {
+  font-size: 48px;
+  font-weight: 300;
+  color: #c0c6ba;
+  margin-bottom: 0;
+}
+
+.landing-page .promotional .promotional__event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.landing-page .promotional .promotional__right {
+  flex: 1 1 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page .promotional .promotional__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .landing-page .promotional .promotional__left {
+    flex-direction: column;
+  }
+  .landing-page .promotional .promotional__zirni-img {
+    width: 300px;
+  }
+
+  .landing-page .promotional .promotional__festival-icon {
+    width: 150px;
+  }
+
+  .landing-page .promotional .promotional__date {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page .promotional {
+    display: none;
+  }
+}

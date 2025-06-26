@@ -1,0 +1,50 @@
+.menu .recommendation-card {
+  background-color: #242424;
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
+  padding: 16px;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.recommendation-card img {
+  width: 280px;
+  height: 220px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.menu .recommendation-card:hover {
+  background-color: #111;
+  transform: scale(1.02);
+}
+
+.menu .recommendation-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.menu .recommendation-card-subtitle {
+  color: #cabb63b6;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+.menu .recommendation-card-description {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: start;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .recommendation-card img {
+    max-width: 300px;
+  }
+}

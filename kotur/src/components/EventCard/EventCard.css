@@ -1,0 +1,109 @@
+.event-card {
+  padding: 18px;
+  text-align: center;
+  width: 300px;
+  height: 380px;
+  position: relative;
+  cursor: pointer;
+  z-index: 99;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.event-card.even {
+  background-color: #000000;
+  color: #c0c6ba;
+}
+
+.event-card.odd {
+  background-color: #98a190;
+  color: #000000;
+}
+
+.event-card .calendar-icon {
+  background-color: #000000;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.event-card .calendar-day {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.event-card .event-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.event-card .event-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-img img {
+  transform: scale(1.05);
+}
+
+.event-card .event-name {
+  font-size: 18px;
+  padding: 8px 0;
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.event-card .event-date {
+  font-size: 14px;
+  padding: 12px 0;
+  margin-bottom: 0;
+}
+
+.event-card.even .event-date {
+  border-bottom: 1px solid #c0c6ba;
+  border-top: 1px solid #c0c6ba;
+}
+
+.event-card.odd .event-date {
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+.event-card .event-time {
+  font-size: 14px;
+  margin-bottom: 0;
+  padding: 12px 0;
+}
+
+/* Make sure card container has proper spacing */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  padding: 0 20px;
+}

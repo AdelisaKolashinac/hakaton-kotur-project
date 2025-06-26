@@ -1,0 +1,57 @@
+.testimonials {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonials .testimonials-card-container {
+  padding: 50px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-columns: calc(50% - 10px);
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.testimonials .testimonials-card {
+  scroll-snap-align: start;
+  background-color: #8b9482;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.testimonials .testimonials-card-user {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.testimonials .testimonials-card-user .user-icon {
+  background-color: #000000;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.testimonials .testimonials-card-user .user-name {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonials .testimonials-card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    max-height: calc(4 * 200px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

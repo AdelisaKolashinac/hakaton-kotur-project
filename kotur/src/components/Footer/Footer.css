@@ -1,0 +1,97 @@
+footer {
+  min-height: 60vh;
+  background-image: url("./landingPage/footer-bg.png");
+  color: #cad1c3;
+  text-align: center;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 40px;
+}
+
+footer .footer-content {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+footer .footer-contact,
+footer .footer-workinghours {
+  padding-top: 20px;
+}
+
+footer .footer-contact h4 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+footer .footer-contact .address {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+footer .footer-contact .phone-number {
+  font-size: 13px;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+footer .footer-kotur h2 {
+  font-weight: 700;
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+footer .footer-kotur .motto {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.footer-social-media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.footer-social-media-icons a {
+  color: inherit;
+}
+
+.footer-workinghours {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 400;
+}
+
+.footer-workinghours p {
+  opacity: 0.8;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .footer-kotur {
+    order: -1;
+  }
+
+  footer .footer-kotur h2 {
+    margin-top: 30px;
+  }
+}

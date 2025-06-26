@@ -1,0 +1,39 @@
+.servicesCard {
+  width: 300px;
+  color: #c0c6ba;
+}
+
+.servicesCard .servicesCard__img {
+  position: relative;
+}
+
+.servicesCard .servicesCard__img img {
+  width: 100%;
+}
+
+.servicesCard .servicesCard__icon {
+  width: 70px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.servicesCard .servicesCard__title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+  text-transform: capitalize;
+}
+
+.servicesCard .servicesCard__description {
+  font-size: 13px;
+}
+
+.servicesCard .servicesCard__button {
+  background-color: #c0c6ba;
+  color: #000000;
+  border: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
